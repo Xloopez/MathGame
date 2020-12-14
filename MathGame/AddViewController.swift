@@ -15,9 +15,6 @@ class AddViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UITextField!
     
-    
-    
-    
     var receivingTitle: String?
     
     var receivingEquationLabel: String?
@@ -48,7 +45,6 @@ class AddViewController: UIViewController {
             } else {
                 destinationVC.receivingAnswerTitle = "INCORRECT"
             }
-            
         }
     }
     
@@ -60,5 +56,9 @@ class AddViewController: UIViewController {
         }
         
         return number
+    }
+    
+    @IBAction func unwindToStartView(segue: UIStoryboardSegue) {
+        
     }
 }

@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MathGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y4-Yd-jua">
@@ -59,13 +59,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YLr-Sm-V8l"/>
                     <connections>
                         <segue destination="Q4n-74-fUh" kind="presentation" identifier="segueToAdd" modalTransitionStyle="coverVertical" id="2Cd-w5-C7r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="0.0" y="94"/>
         </scene>
         <!--AddView-->
         <scene sceneID="PqW-Wt-wYU">
@@ -135,12 +136,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextOrRetryBtn:" destination="VLw-5u-JXy" eventType="touchUpInside" id="UwB-G4-bgz"/>
+                                    <segue destination="Q4n-74-fUh" kind="presentation" identifier="segueCorrectAnswer" id="K3Z-8S-mHc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61z-0E-mks">
                                 <rect key="frame" x="132" y="535" width="151" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Back to menu"/>
+                                <connections>
+                                    <action selector="backToMenuBtn:" destination="VLw-5u-JXy" eventType="touchUpInside" id="l7K-qt-ed6"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueBackToMenu" modalTransitionStyle="coverVertical" id="SQq-Rf-oC8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-Ei-Tq7">
                                 <rect key="frame" x="76" y="266" width="263" height="61"/>
@@ -161,11 +170,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd4-ys-Ldh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="93.75"/>
+            <point key="canvasLocation" x="1968" y="94"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vSg-Qx-2CN"/>
+        <segue reference="K3Z-8S-mHc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
