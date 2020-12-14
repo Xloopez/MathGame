@@ -15,6 +15,8 @@
 		FC78720E2586781C0091858D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC78720C2586781C0091858D /* LaunchScreen.storyboard */; };
 		FC7872192586781D0091858D /* MathGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7872182586781D0091858D /* MathGameTests.swift */; };
 		FC7872242586781D0091858D /* MathGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7872232586781D0091858D /* MathGameUITests.swift */; };
+		FC7872352586ACE60091858D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7872342586ACE60091858D /* AddViewController.swift */; };
+		FC78723A2587B8070091858D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7872392587B8070091858D /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FC78721F2586781D0091858D /* MathGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7872232586781D0091858D /* MathGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGameUITests.swift; sourceTree = "<group>"; };
 		FC7872252586781D0091858D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7872342586ACE60091858D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		FC7872392587B8070091858D /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				FC78720A2586781C0091858D /* Assets.xcassets */,
 				FC78720C2586781C0091858D /* LaunchScreen.storyboard */,
 				FC78720F2586781C0091858D /* Info.plist */,
+				FC7872342586ACE60091858D /* AddViewController.swift */,
+				FC7872392587B8070091858D /* AnswerViewController.swift */,
 			);
 			path = MathGame;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			files = (
 				FC787206258678180091858D /* ViewController.swift in Sources */,
 				FC787202258678180091858D /* AppDelegate.swift in Sources */,
+				FC78723A2587B8070091858D /* AnswerViewController.swift in Sources */,
+				FC7872352586ACE60091858D /* AddViewController.swift in Sources */,
 				FC787204258678180091858D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
