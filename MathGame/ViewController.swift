@@ -32,10 +32,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func multipyBtn(_ sender: Any) {
+        segueIdentifier = "segueToMultiply"
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
     
     @IBAction func divideBtn(_ sender: Any) {
+        segueIdentifier = "segueToDivide"
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,15 +60,26 @@ class ViewController: UIViewController {
             destinationVC.receivingEquationLabel = "\(numberA) - \(numberB)"
             
             destinationVC.answer = numberA - numberB
+            
+        } else if segue.identifier == "segueToMultiply" {
+            let destinationVC = segue.destination as! AddViewController
+            
+            destinationVC.receivingTitle = "Multiply"
+            
+            destinationVC.receivingEquationLabel = "\(numberA) * \(numberB)"
+            
+            destinationVC.answer = numberA * numberB
+            
+        } else if segue.identifier == "segueToDivide" {
+            let destinationVC = segue.destination as! AddViewController
+            
+            destinationVC.receivingTitle = "Divide"
+            
+            destinationVC.receivingEquationLabel = "\(numberA) / \(numberB)"
+            
+            destinationVC.answer = numberA / numberB
         }
-        
     }
     
-    func addInt () {
-        numberA = Int.random(in: 1..<100)
-        numberB = Int.random(in: 1..<100)
-    }
-    
-
 }
 
