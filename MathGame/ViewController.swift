@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let segueToAdd = "segueToAdd"
+    var segueIdentifier = ""
     
     var numberA = Int.random(in: 1..<100)
     
@@ -19,21 +19,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
     }
     
     @IBAction func addBtn(_ sender: Any) {
-        performSegue(withIdentifier: segueToAdd, sender: self)
-        
-        //Ska finnas addition titel
-        
-        
+        segueIdentifier = "segueToAdd"
+        performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
+    
+    @IBAction func subBtn(_ sender: Any) {
+        segueIdentifier = "segueToSubtract"
+        performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
+    
+    @IBAction func multipyBtn(_ sender: Any) {
+    }
+    
+    
+    @IBAction func divideBtn(_ sender: Any) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueToAdd {
+        if segue.identifier == "segueToAdd" {
             let destinationVC = segue.destination as! AddViewController
             
             destinationVC.receivingTitle = "Addition"
@@ -42,6 +48,14 @@ class ViewController: UIViewController {
             
             destinationVC.answer = numberA + numberB
             
+        } else if segue.identifier == "segueToSubtract" {
+            let destinationVC = segue.destination as! AddViewController
+            
+            destinationVC.receivingTitle = "Subtraction"
+            
+            destinationVC.receivingEquationLabel = "\(numberA) - \(numberB)"
+            
+            destinationVC.answer = numberA - numberB
         }
         
     }

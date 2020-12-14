@@ -11,8 +11,9 @@ class AnswerViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     
-    
     @IBOutlet weak var nextOrRetrybtn: UIButton!
+    
+    
     
     
     
@@ -31,11 +32,13 @@ class AnswerViewController: UIViewController {
             answerLabel.text = receivingAnswerTitle
             answerLabel.backgroundColor = UIColor.systemGreen
             nextOrRetrybtn.setTitle("NEXT", for: .normal)
+            nextOrRetrybtn.tintColor = UIColor.systemGreen
             
         } else if receivingAnswerTitle == "INCORRECT" {
             answerLabel.text = receivingAnswerTitle
             answerLabel.backgroundColor = UIColor.systemRed
             nextOrRetrybtn.setTitle("RETRY", for: .normal)
+            nextOrRetrybtn.tintColor = UIColor.systemRed
             
         }
     }

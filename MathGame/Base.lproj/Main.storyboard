@@ -30,18 +30,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Subtraktion - "/>
+                                <connections>
+                                    <action selector="subBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VML-y0-y8y"/>
+                                    <segue destination="Q4n-74-fUh" kind="show" identifier="segueToSubtract" id="0bI-3S-zfx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-dO-F46">
                                 <rect key="frame" x="111" y="448" width="192" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Multiplikation * "/>
+                                <connections>
+                                    <action selector="multipyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lfl-eF-rJT"/>
+                                    <segue destination="Q4n-74-fUh" kind="show" identifier="segueToMultiply" id="daH-Rv-Itk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-1r-D9d">
                                 <rect key="frame" x="129" y="557" width="157" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Division /"/>
+                                <connections>
+                                    <action selector="divideBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JvE-US-DU7"/>
+                                    <segue destination="Q4n-74-fUh" kind="show" identifier="segueToDivide" id="vSg-Qx-2CN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -128,7 +140,7 @@
                                 <rect key="frame" x="132" y="535" width="151" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Back to menu"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-Ei-Tq7">
                                 <rect key="frame" x="76" y="266" width="263" height="61"/>
@@ -152,6 +164,9 @@
             <point key="canvasLocation" x="1876.8115942028987" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vSg-Qx-2CN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
